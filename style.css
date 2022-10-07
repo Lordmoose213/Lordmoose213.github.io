@@ -1,0 +1,200 @@
+/*Variable Declarations*/
+:root {
+    --background: white;
+    --navbarBackground: #1f1f1f;
+    --navbarLinksHoverColor: #8600b3;
+    --currentPageNavbarLinkColor: #600080;
+    --navbarButtonBorder: black;
+    --navbarHeight:60px;
+    --mobilenavbarHeight:40px;
+    --navbartextcolor: white;
+    --maintextcolor: black;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+}
+
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--background);
+}
+
+p{
+    display: flex;
+    margin-left: 10%;
+    margin-right: 10%;
+    color: var(--maintextcolor);
+}
+
+@media screen and (min-width: 800px) {
+    .mobile_only{display:none};
+}
+.navbar{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: var(--navbarBackground);
+    height: var(--navbarHeight);
+    overflow: visible;
+    position: relative;
+}
+
+.navbar_pfp_name{
+    display:flex;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 20px;
+    color:var(--navbartextcolor);
+    font-weight: bold;
+    font-size:larger;
+}
+
+.navbar .navbar_pfp_name .pfp{
+    box-sizing: border-box;
+    height: 2.5em;
+    border-style: solid;
+    border-width: 3px;
+    border-color: var(--currentPageNavbarLinkColor);
+    margin-right: 10px;
+}
+
+
+/* Page Changing Header Buttons */
+.navbar ul{
+    list-style-type: none;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.navbar ul li{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    transition: .4s;
+}
+.navbar ul li:hover, .navbar ul li:active{
+    background-color: var(--navbarLinksHoverColor);
+}
+
+.navbar ul a{
+    color: var(--navbartextcolor);
+    text-decoration: none;
+}
+
+.navbar .current_page, .navbar .current_page:hover, .navbar .current_page:active{
+    background-color: var(--currentPageNavbarLinkColor);
+}
+
+
+/* MOBILE NAVBAR */
+@media screen and (max-width: 800px) {
+
+    /* Formatting changes */
+    body{font-size: 14px;}
+    .navbar{height: 40px;}
+    .navbar .navbar_pfp_name .pfp{height:30px;}
+    .navbar #normal_nav_buttons{ display: none; }
+    .navbar {justify-content: space-between;}
+
+    .navbar .menu_dropdown{
+        color:var(--navbartextcolor);
+        padding: 10px;
+        font-weight: bold;
+        position: relative;
+        transition: .2s;
+    }
+
+    .navbar .menu_dropdown:hover{
+        background-color: var(--currentPageNavbarLinkColor);
+    }
+    
+
+    .navbar .menu_dropdown .dropdown_menu_container{
+        background-color: var(--navbarBackground);
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: calc(var(--mobilenavbarHeight) - 1px);
+        right: 0px;
+        height:fit-content;
+        display: flex;
+        opacity: 0;
+        visibility: hidden;
+        transition: .2s;
+    }
+
+    .navbar .menu_dropdown:hover .dropdown_menu_container{
+        visibility: visible;
+        opacity: 1;
+    }
+
+    .navbar .menu_dropdown .dropdown_menu_container a{
+        height: var(--mobilenavbarHeight);
+    }
+}
+
+/* "Links" Page Content */
+.links_flex_container{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-left: 20%;
+    margin-right: 20%;
+    justify-content: center;
+    align-content: space-between;
+}
+
+.links_page_content{
+    margin:100px;
+}
+
+.links_flex_traits{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width:180px;
+    height:180px;
+    text-decoration: none;
+    color: var(--maintextcolor);
+    transition: .2s;
+}
+
+.links_image_properties{
+    width: 120px;
+    height: 120px;
+    transition: .2s;
+}
+
+.links_image_properties:hover, .links_image_properties:active{
+    width: 140px;
+    height: 140px;
+}
+
+.center{
+    text-align: center;
+}
+.center2{
+    justify-content: center;
+}
+.thunderbirdPageBackground{
+    background-color: #434347;
+    color:white;
+}
+
+/* .title{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display:flex;
+    justify-content: center;
+    background-color: var(--titlebackground);
+    margin: 0px;
+    padding:1%;
+    border:0px;
+} */
