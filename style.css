@@ -6,11 +6,11 @@
     --currentPageNavbarLinkColor: #600080;
     --navbarButtonBorder: black;
     --navbarHeight:60px;
-    --mobilenavbarHeight:40px;
+    --mobilenavbarHeight:60px;
     --navbartextcolor: white;
     --maintextcolor: black;
-    --light-grey_1: #D3D3D3;
-    --light-grey_2: #ededed;
+    --light-grey_1: #ededed;
+    --light-grey_2: #f9f9f9;
 }
 
 *{
@@ -100,14 +100,14 @@ p{
 
     /* Formatting changes */
     body{font-size: 14px;}
-    .navbar{height: 40px;}
-    .navbar .navbar_pfp_name .pfp{height:30px;}
+    .navbar{height: var(--mobilenavbarHeight);}
+    .navbar .navbar_pfp_name .pfp{height:40px;}
     .navbar #normal_nav_buttons{ display: none; }
     .navbar {justify-content: space-between;}
 
     .navbar .menu_dropdown{
         color:var(--navbartextcolor);
-        padding: 10px;
+        padding: 20px;
         font-weight: bold;
         position: relative;
         transition: .2s;
@@ -157,7 +157,7 @@ p{
     justify-content: space-around;
     align-items: center;
     max-width: calc(max-content/2);
-    height:180px;
+    height:220px;
     text-decoration: none;
     color: var(--maintextcolor);
     transition: .2s;
@@ -169,7 +169,7 @@ p{
     background-color: var(--light-grey_2);
     align-items: center;
     justify-content: space-around;
-    height:180px;
+    height:220px;
     color: var(--maintextcolor);
     transition: .2s;
 }
@@ -217,6 +217,10 @@ p{
 .thunderbirdPageBackground{
     background-color: #434347;
     color:white;
+}
+
+.basic_large_text{
+    font-size: large;
 }
 
 /* .title{
