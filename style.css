@@ -156,7 +156,8 @@ p{
     background-color: var(--light-grey_1);
     justify-content: space-around;
     align-items: center;
-    max-width: calc(max-content/2);
+    padding-left: 30%;
+    padding-right: 30%;
     height:220px;
     text-decoration: none;
     color: var(--maintextcolor);
@@ -168,6 +169,8 @@ p{
     flex-direction: row;
     background-color: var(--light-grey_2);
     align-items: center;
+    padding-left: 30%;
+    padding-right: 30%;
     justify-content: space-around;
     height:220px;
     color: var(--maintextcolor);
