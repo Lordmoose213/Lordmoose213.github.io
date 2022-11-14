@@ -98,7 +98,7 @@ p{
     .navbar{height: var(--mobilenavbarHeight);}
     .navbar .pfp{height:40px;}
     .navbar #normal_nav_buttons{ display: none; }
-    .navbar {justify-content: space-between;}
+    .navbar {justify-content: center;}
 
     .navbar .menu_dropdown{
         color:var(--navbartextcolor);
