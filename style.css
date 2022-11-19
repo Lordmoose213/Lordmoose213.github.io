@@ -29,7 +29,6 @@ body{
 
 main{
     background-color: #3d3d3d;
-    height: 80vh;
 }
 
 p{
@@ -37,6 +36,12 @@ p{
     margin-left: 10%;
     margin-right: 10%;
     color: var(--maintextcolor);
+}
+
+h2{
+    color:white;
+    text-align: center;
+    padding: 15px;
 }
 
 @media screen and (min-width: 800px) {
@@ -90,52 +95,6 @@ p{
     background-color: var(--currentPageNavbarLinkColor);
 }
 
-/* MOBILE NAVBAR */
-@media screen and (max-width: 800px) {
-
-    /* Formatting changes */
-    body{font-size: 14px;}
-    .navbar{height: var(--mobilenavbarHeight);}
-    .navbar .pfp{height:40px;}
-    .navbar #normal_nav_buttons{ display: none; }
-    .navbar {justify-content: center;}
-
-    .navbar .menu_dropdown{
-        color:var(--navbartextcolor);
-        padding: 20px;
-        margin-right: 15%;
-        font-weight: bold;
-        position: relative;
-        transition: .2s;
-    }
-
-    .navbar .menu_dropdown:hover{
-        background-color: var(--currentPageNavbarLinkColor);
-    }
-    
-    .navbar .menu_dropdown .dropdown_menu_container{
-        background-color: var(--navbarBackground);
-        display: flex;
-        flex-direction: column;
-        position: absolute;
-        top: calc(var(--mobilenavbarHeight) - 1px);
-        right: 0px;
-        height:fit-content;
-        display: flex;
-        opacity: 0;
-        visibility: hidden;
-        transition: .2s;
-    }
-
-    .navbar .menu_dropdown:hover .dropdown_menu_container{
-        visibility: visible;
-        opacity: 1;
-    }
-
-    .navbar .menu_dropdown .dropdown_menu_container a{
-        height: var(--mobilenavbarHeight);
-    }
-}
 
 /* "Links" */
 .links_flex_container{
@@ -187,8 +146,6 @@ p{
     margin-right: 15px;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
-    font-weight: bolder;
 }
 
 .links_image_properties{
@@ -201,6 +158,60 @@ p{
     width: 45px;
     height: 45px;
 }
+/* end links */
+/* boxes */
+.info_boxes{
+    margin-top: 25px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.box_content_container{
+    padding:10px 10px 10px 30px;
+}
+
+.box_color_1{
+    margin: 25px;
+    border: 4px solid #bf00ff;
+    border-radius: 5px;
+    width:400px;
+    height:250px;
+    color:#bf00ff;
+    font-weight: 620;
+}
+
+.box_color_2{
+    margin: 25px;
+    border: 4px solid #8f00ff;
+    border-radius: 5px;
+    width:400px;
+    height:250px;
+    color:#8f00ff;
+    font-weight: 620;
+}
+
+.box_color_3{
+    margin: 25px;
+    border: 4px solid #6f00ff;
+    border-radius: 5px;
+    width:400px;
+    height:250px;
+    color:#6f00ff;
+    font-weight: 620;
+}
+
+.box_color_4{
+    margin: 25px;
+    border: 4px solid #3f00ff;
+    border-radius: 5px;
+    width:400px;
+    height:250px;
+    color:#3f00ff;
+    font-weight: 620;
+}
+/*END BOXES*/
 
 .center{
     text-align: center;
