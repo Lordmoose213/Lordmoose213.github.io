@@ -44,6 +44,10 @@ h2{
     padding: 15px;
 }
 
+h3{
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 800px) {
     .mobile_only{display:none};
 }
