@@ -5,21 +5,25 @@
 }
 
 :root, 
-    :root.dark{
+    :root.theme_dark{
     --background: #333333;
     --navbarBackground: #1f1f1f;
-    --navbarLinksHoverColor: #8600b3;
-    --currentPageNavbarLinkColor: #600080;
-    --navbarButtonBorder: black;
-    --navbartextcolor: #f7f7f7;
+    --mainBackroundColor: #3d3d3d;
     --maintextcolor: #f7f7f7;
     --box1Color: #bf00ff; /* Electric Purple */
     --box2Color: #cc00cc; /* Deep Magenta */
     --box3Color: #df00ff; /* Psychedelic purple */
     --box4Color: #df00ff; /* Veronica */
     }
-    :root.pastel{
-        --background:var(--box2Color);
+    :root.theme_pastel{
+    --background: #aec6cf;
+    --navbarBackground: #967bb6;
+    --mainBackroundColor: #c8a2c8;
+    --maintextcolor: #f7f7f7;
+    --box1Color: #f7f7f7; 
+    --box2Color: #f7f7f7; 
+    --box3Color: #f7f7f7; 
+    --box4Color: #f7f7f7;
     }
 *{
     box-sizing: border-box;
@@ -36,7 +40,7 @@ body{
 }
 
 main{
-    background-color: #3d3d3d;
+    background-color: var(--mainBackroundColor);
 }
 
 p{
@@ -91,14 +95,20 @@ h3{
     align-items: center;
 }
 
+.theme_button_img{
+    height: 100%;
+    border-radius: 15px;
+}
+
 .theme_button{
     height: 80%;
     width: 80%;
     border-radius: 15px;
+    background-color: #333333;
     }
 
-.theme_button.theme_dark{
-    display:none;
+    .theme_button.theme_dark{
+        display:none;
     }
     
     .theme_pastel .theme_button.theme_dark{
@@ -158,7 +168,7 @@ h3{
     border-radius: 5px;
     width:400px;
     min-height:250px;
-    color:#bf00ff;
+    color:var(--box1Color);
     font-weight: 620;
 }
 
@@ -168,7 +178,7 @@ h3{
     border-radius: 5px;
     width:400px;
     min-height:250px;
-    color:#cc00cc;
+    color:var(--box2Color);
     font-weight: 620;
 }
 
@@ -178,7 +188,7 @@ h3{
     border-radius: 5px;
     width:400px;
     min-height:250px;
-    color:#df00ff;
+    color:var(--box3Color);
     font-weight: 620;
 }
 
@@ -188,7 +198,7 @@ h3{
     border-radius: 5px;
     width:400px;
     min-height:250px;
-    color:#a020f0;
+    color:var(--box4Color);
     font-weight: 620;
 }
 /*END BOXES*/
