@@ -97,12 +97,12 @@ h3{
 
 .theme_button_img{
     height: 100%;
-    border-radius: 15px;
+    border-radius: 10px;
 }
 
 .theme_button{
-    height: 80%;
-    width: 80%;
+    height: 60%;
+    width: 60%;
     border-radius: 15px;
     background-color: #333333;
     }
